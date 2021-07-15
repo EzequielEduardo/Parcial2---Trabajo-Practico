@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Version 2.15" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Version 1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Version 1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Articulo.h" />
+		<Unit filename="include/ArticuloFile.h" />
+		<Unit filename="include/ArticuloNegocio.h" />
+		<Unit filename="include/ArticuloVista.h" />
+		<Unit filename="include/Cliente.h" />
+		<Unit filename="include/ClienteFile.h" />
+		<Unit filename="include/ClienteNegocio.h" />
+		<Unit filename="include/ClienteVista.h" />
+		<Unit filename="include/CompraFile.h" />
+		<Unit filename="include/CompraNegocio.h" />
+		<Unit filename="include/CompraVista.h" />
+		<Unit filename="include/Empleado.h" />
+		<Unit filename="include/EmpleadoFile.h" />
+		<Unit filename="include/EmpleadoNegocio.h" />
+		<Unit filename="include/EmpleadoVista.h" />
+		<Unit filename="include/Fecha.h" />
+		<Unit filename="include/MenuPrincipal.h" />
+		<Unit filename="include/Persona.h" />
+		<Unit filename="include/Proveedor.h" />
+		<Unit filename="include/ProveedorFile.h" />
+		<Unit filename="include/ProveedorNegocio.h" />
+		<Unit filename="include/ProveedorVista.h" />
+		<Unit filename="include/Transaxinventario.h" />
+		<Unit filename="include/TransaxinventarioFile.h" />
+		<Unit filename="include/TransaxinventarioNegocio.h" />
+		<Unit filename="include/TransaxinventarioVista.h" />
+		<Unit filename="include/VentaFile.h" />
+		<Unit filename="include/VentaNegocio.h" />
+		<Unit filename="include/VentaVista.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Articulo.cpp" />
+		<Unit filename="src/ArticuloFile.cpp" />
+		<Unit filename="src/ArticuloNegocio.cpp" />
+		<Unit filename="src/ArticuloVista.cpp" />
+		<Unit filename="src/Cliente.cpp" />
+		<Unit filename="src/ClienteFile.cpp" />
+		<Unit filename="src/ClienteNegocio.cpp" />
+		<Unit filename="src/ClienteVista.cpp" />
+		<Unit filename="src/CompraFile.cpp" />
+		<Unit filename="src/CompraNegocio.cpp" />
+		<Unit filename="src/CompraVista.cpp" />
+		<Unit filename="src/Empleado.cpp" />
+		<Unit filename="src/EmpleadoFile.cpp" />
+		<Unit filename="src/EmpleadoNegocio.cpp" />
+		<Unit filename="src/EmpleadoVista.cpp" />
+		<Unit filename="src/Fecha.cpp" />
+		<Unit filename="src/MenuPrincipal.cpp" />
+		<Unit filename="src/Persona.cpp" />
+		<Unit filename="src/Proveedor.cpp" />
+		<Unit filename="src/ProveedorFile.cpp" />
+		<Unit filename="src/ProveedorNegocio.cpp" />
+		<Unit filename="src/ProveedorVista.cpp" />
+		<Unit filename="src/Transaxinventario.cpp" />
+		<Unit filename="src/TransaxinventarioFile.cpp" />
+		<Unit filename="src/TransaxinventarioNegocio.cpp" />
+		<Unit filename="src/TransaxinventarioVista.cpp" />
+		<Unit filename="src/VentaFile.cpp" />
+		<Unit filename="src/VentaNegocio.cpp" />
+		<Unit filename="src/VentaVista.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
