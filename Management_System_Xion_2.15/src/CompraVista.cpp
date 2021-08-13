@@ -103,7 +103,7 @@ bool CompraVista::mostrarCompras(){
     vectorCompras=negocio.Cargar_Vector_de_Compras();///get_compras
 
 		 cout<< "LISTADO DE COMPRAS REALIZADAS"<<endl;
-        for(int x;x<negocio.CantidadDeCompras();x++){
+        for(int x=0;x<negocio.CantidadDeCompras();x++){
         cout<< "ID_Articulo: "<<vectorCompras[x].getTRID_Articulo() <<endl;
 		cout<< "Fecha de compra: ";vectorCompras[x].getFechaTransax().MostrarFecha();
         cout<< "Cantidad: "<<vectorCompras[x].getTRCantidad() <<endl;

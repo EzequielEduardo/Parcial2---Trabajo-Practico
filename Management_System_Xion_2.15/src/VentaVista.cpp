@@ -5,11 +5,13 @@
 #include <cstdio>
 #include<string.h>
 
+
 #include "ArticuloNegocio.h"
 #include "TransaxinventarioNegocio.h"
 #include "Transaxinventario.h"
 #include "VentaNegocio.h"
 #include "VentaVista.h"
+
 
 using namespace std;
 
@@ -42,7 +44,7 @@ void VentaVista::menuVentas()
 
         case 0:
 
-		break;
+            break;
 
         default:
             break;
@@ -96,19 +98,68 @@ bool VentaVista::cargarVentas()
     return negocio.guardarDatosVenta(venta);
 }
 
-bool VentaVista::mostrarVentas(){
+bool VentaVista::mostrarVentas()
+{
 
-	TransaxinventarioNegocio negocio;
+    TransaxinventarioNegocio negocio;
     TransaxInventario *vectorVentas;
 
     vectorVentas=negocio.Cargar_Vector_de_Ventas();///get_compras
-		cout<< "LISTADO DE VENTAS REALIZADAS"<<endl;
-        for(int x;x<negocio.CantidadDeVentas();x++){
+    cout<< "LISTADO DE VENTAS REALIZADAS"<<endl;
+    for(int x=0; x<negocio.CantidadDeVentas(); x++)
+    {
         cout<< "ID_Articulo: "<<vectorVentas[x].getTRID_Articulo() <<endl;
-		cout<< "Fecha de compra: ";vectorVentas[x].getFechaTransax().MostrarFecha();
+        cout<< "Fecha de compra: ";
+        vectorVentas[x].getFechaTransax().MostrarFecha();
         cout<< "Cantidad: "<<vectorVentas[x].getTRCantidad() <<endl;
         cout<< "Precio Unitario: "<<vectorVentas[x].getTRprecioUnitario() <<endl;
-        cout<< "-------------------------"<<endl;}
+        cout<< "-------------------------"<<endl;
+    }
+
+    delete vectorVentas;
+
+}
+
+void VentaVista::mostrarVentas_PorArticulo_Y_Fecha()
+{
+    TransaxinventarioNegocio negocio;
+    TransaxInventario *vectorVentas;
+
+    cout<<"Indique Articulo: ";
+    cin>>ID;
+    cout<<endl;
+    cout<<"Indique mes: "<<endl;
+    cin>>mes;
+    cout<<endl;
+    cout<<"Indique Anio: "<<endl;
+    cin>>anio;
+    cout<<endl;
+1
+    int cantidad=0;
+
+
+
+    vectorVentas=negocio.Cargar_Vector_de_Ventas();///get_compras
+
+    cout<< "LISTADO DE VENTAS REALIZADAS DEL ARTICULO "<<ID<<endl;
+    cout<<mes<<"/"<<anio<<endl;
+
+    for(int x=0; x<negocio.CantidadDeVentas(); x++)
+    {
+
+        if(ID==vectorVentas[x].getTRID_Articulo())
+        {
+
+            if(vectorVentas[x].fechaTransax.getMes()==mes && vectorVentas[x].fechaTransax.getAnio()==anio)
+            {
+
+            cantidad +=vectorVentas[x].getTRCantidad();
+
+            }
+        }
+
+    }
+    cout<<"Cantidad de articulos vendidos: "<<cantidad;
 
     delete vectorVentas;
 

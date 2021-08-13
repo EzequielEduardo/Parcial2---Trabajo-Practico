@@ -93,7 +93,7 @@ void ArticuloVista::mostrarArticulos()
 
     vectorArticulos=negocio.Cargar_Vector_de_Articulos();///get_clientes
 
-        for(int x;x<negocio.CantidadDeArticulos();x++){
+        for(int x=0;x<negocio.CantidadDeArticulos();x++){
         cout<< "ID_Articulo: "<<vectorArticulos[x].getID_Articulo() <<endl;
         cout<< "Precio Unitario de lista: "<<vectorArticulos[x].getprecioUnitario() <<endl;
 

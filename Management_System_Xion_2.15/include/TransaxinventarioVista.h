@@ -14,6 +14,7 @@ class TransaxinventarioVista
 	void MostrarInventario();
 
 
+
 };
 
 #endif // TRANSAXINVENTARIOVISTA_H

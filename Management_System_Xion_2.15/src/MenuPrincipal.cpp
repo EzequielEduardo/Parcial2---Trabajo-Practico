@@ -135,6 +135,7 @@ void MenuPrincipal::submenuInventarios(){
 		cout<<"3-CARGAR VENTAS"<<endl;
 		cout<<"4-LISTAR VENTAS"<<endl;
 		cout<<"5-LISTAR STOCK POR FECHA"<<endl;
+		cout<<"6-MOSTRAR VENTAS POR ARTICULO Y FECHA"<<endl;
         cout<<"0-SALIR DEL PROGRAMA"<<endl<<endl;
         cout<<"Ingresar Opcion: ";
         cin>>opc;
@@ -174,6 +175,13 @@ void MenuPrincipal::submenuInventarios(){
 
 			TransaxinventarioVista obj3;
 			obj3.MostrarInventario();
+			system("pause");
+			system("cls");
+            break;
+
+        case 6:
+			VentaVista obj3;
+			obj3.mostrarVentas_PorArticulo_Y_Fecha();
 			system("pause");
 			system("cls");
             break;

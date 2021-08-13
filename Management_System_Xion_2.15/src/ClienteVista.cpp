@@ -136,7 +136,7 @@ void ClienteVista::mostrarClientes()
 
     vectorClientes=negocio.Cargar_Vector_de_Clientes();///get_clientes
 
-        for(int x;x<negocio.CantidadDeClientes();x++){
+        for(int x=0;x<negocio.CantidadDeClientes();x++){
 		cout<< "Fecha de Incorporacion: ";vectorClientes[x].getFechadeIncorporacion().MostrarFecha();
 		cout<< "Anio de Incorporacion: "<<vectorClientes[x].getFechadeIncorporacion().getAnio() <<endl;
         cout<< "Mes de Incorporacion: "<<vectorClientes[x].getFechadeIncorporacion().getMes() <<endl;
